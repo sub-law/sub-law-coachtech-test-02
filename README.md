@@ -14,43 +14,53 @@ git commit -m "リモートリポジトリの変更"
 git push origin main
 
 🚀2：Laravel環境構築 
-※プロジェクト直下の.gitignoreファイルによって 
-以下のファイルはgit管理対象外です
-.env 
-docker/mysql/data/ 
+## 必要なディレクトリの作成（初回セットアップ時）
 
-1：プロジェクト直下に.envを作成（既にファイルがあり以下の記述があれば不要）
+1:Laravelの一部コマンド実行には、以下のディレクトリが必要です。  
+Gitでは空フォルダが追跡されないため、`.gitkeep` を配置しておくか、以下のコマンドで作成してください。
+
+mkdir -p src/storage/framework/cache/data
+mkdir -p src/storage/framework/sessions
+mkdir -p src/storage/framework/views
+mkdir -p src/storage/logs
+
+touch src/storage/framework/cache/.gitkeep
+touch src/storage/framework/sessions/.gitkeep
+touch src/storage/framework/views/.gitkeep
+touch src/storage/logs/.gitkeep 
+
+2：プロジェクト直下に.envを作成（既にファイルがあり以下の記述があれば不要）
 touch .env
 
-2：.envに以下を記述（UID/GIDはホストOSのユーザーIDに合わせて設定）
+3：.envに以下を記述（UID/GIDはホストOSのユーザーIDに合わせて設定）
 UID=1000
 GID=1000
 
-3：Docker ビルド 
+4：Docker ビルド 
 docker-compose up -d --build
 
-4：PHPコンテナに入る 
+5：PHPコンテナに入る 
 docker-compose exec php bash
 
-5：Composer インストール 
+6：Composer インストール 
 composer install
 
-6：.env 作成 
+7：.env 作成 
 cp .env.example .env
 
-7：アプリキー生成 
+8：アプリキー生成 
 php artisan key:generate
 
-8：データベースの作成（マイグレーション） 
+9：データベースの作成（マイグレーション） 
 php artisan migrate
 
-9：ダミーデータの作成 
+10：ダミーデータの作成 
 php artisan db:seed
 
-10：ストレージとのリンク
+11：ストレージとのリンク
 php artisan storage:link
 
-11：PHPコンテナから出る　Ctrl+D
+12：PHPコンテナから出る　Ctrl+D
 
 ER図
 ![alt text](image.png)

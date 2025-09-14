@@ -15,5 +15,14 @@ yarn-error.log
 /.vscode
 /storage/app/public/*
 /src/storage
-!/src/storage/app/public/images
-!/src/storage/app/public/products
+/src/storage/framework/cache/*
+!/src/storage/framework/cache/.gitkeep
+
+/src/storage/framework/sessions/*
+!/src/storage/framework/sessions/.gitkeep
+
+/src/storage/framework/views/*
+!/src/storage/framework/views/.gitkeep
+
+/src/storage/logs/*
+!/src/storage/logs/.gitkeep

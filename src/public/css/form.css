@@ -1,0 +1,190 @@
+.product-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+}
+
+.form-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FFA929;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.label-wrapper label {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.badge-required {
+    display: inline-block;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 8px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    font-size: 15px;   
+    border-radius: 5px;
+    box-sizing: border-box;  
+    border: 1px solid #ccc;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.season-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 4px;
+    margin-top: 8px;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: default;
+    user-select: none;
+}
+
+.season-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.season-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.season-item input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.badge-note {
+    font-size: 0.85em;
+    color: #FF0000;
+    margin-left: 8px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.back-button,
+.submit-button {
+    width: 160px;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+}
+
+.submit-button {
+    background-color: #FFA929;
+    color:#95812a;
+}
+
+.clear-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.clear-button:hover {
+    background-color: #e0e0e0;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 4px;
+}

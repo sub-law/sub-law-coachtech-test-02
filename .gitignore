@@ -1,0 +1,5 @@
+.env
+docker/mysql/data/
+/src/storage
+!/src/storage/app/public/images
+!/src/storage/app/public/products
